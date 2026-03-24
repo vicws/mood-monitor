@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diário de Humor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Diário de Humor</h1>
+
+      <form id="entryForm">
+        <label>Humor (0-10)</label>
+        <input
+          class="field"
+          type="number"
+          id="mood"
+          min="0"
+          max="10"
+          required
+        />
+
+        <label>Ansiedade (0-10)</label>
+        <input
+          class="field"
+          type="number"
+          id="anxiety"
+          min="0"
+          max="10"
+          required
+        />
+
+        <label>Irritabilidade (0-10)</label>
+        <input
+          class="field"
+          type="number"
+          id="irritability"
+          min="0"
+          max="10"
+          required
+        />
+
+        <label>Energia (0-10)</label>
+        <input
+          class="field"
+          type="number"
+          id="energy"
+          min="0"
+          max="10"
+          required
+        />
+
+        <label>Horas de sono</label>
+        <input
+          class="field"
+          type="number"
+          id="sleepHours"
+          min="0"
+          max="24"
+          required
+        />
+
+        <label>Qualidade do sono (0-10)</label>
+        <input
+          class="field"
+          type="number"
+          id="sleepQuality"
+          min="0"
+          max="10"
+          required
+        />
+
+        <h3>Sintomas (texto)</h3>
+        <div id="symptomsContainer"></div>
+        <button type="button" id="addSymptom">+ Adicionar sintoma</button>
+
+        <h3>Marcador Personalizado (nome + nota)</h3>
+        <div id="customContainer"></div>
+        <button type="button" id="addCustom">
+          + Adicionar métrica personalizada
+        </button>
+
+        <h3>
+          <button type="button" id="toggleNotes">
+            Mostrar/Esconder Observações
+          </button>
+        </h3>
+        <textarea id="notes" style="display: none" class="field"></textarea>
+
+        <button type="submit">Salvar</button>
+      </form>
+
+      <h2>Entradas</h2>
+      <ul id="entriesList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
